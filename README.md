@@ -22,13 +22,16 @@ Number of test samples: 10000
 
 
 ## Misclassified Images
-1. Batch Normalization + L1
+1. Batch Normalization + L1  
+
 ![BN_missclassified](https://user-images.githubusercontent.com/65554220/121549777-c86e2c00-ca2b-11eb-88f6-18c5f125f3aa.png)
 
 
-2. Group Normalization
+2. Group Normalization  
+
 ![GN_missclassified](https://user-images.githubusercontent.com/65554220/121549846-d6bc4800-ca2b-11eb-99d9-1657f1d7ed51.png)
 
 
-3. Layer Normalization
+3. Layer Normalization  
+
 ![LN_missclassified](https://user-images.githubusercontent.com/65554220/121549886-df148300-ca2b-11eb-9fa8-afc3a7fd977a.png)
