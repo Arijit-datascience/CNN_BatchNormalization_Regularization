@@ -17,6 +17,20 @@ Number of test samples: 10000
 ## Regularization
 1. L1 Regularization
 
+## Findings
+1. Model 1 - Batch Normalization + L1  
+Train Accuracy: 99.48  
+Test Accuracy: 99.48  
+
+2. Model 2 - Group Normalization  
+Train Accuracy: 99.63  
+Test Accuracy: 99.52
+
+3. Model 3 - Layer Normalization  
+Train Accuracy: 99.58  
+Test Accuracy: 99.46  
+
+
 ## Training and Validation - Loss & Accuracy
 ![train_test_loss_and_accuracy](https://user-images.githubusercontent.com/65554220/121549498-8b099e80-ca2b-11eb-9e13-9d4503b3cf94.png)
 
