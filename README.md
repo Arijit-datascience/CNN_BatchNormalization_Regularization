@@ -15,7 +15,8 @@ Number of test samples: 10000
 3. Layer Normalization
 
 ## Regularization
-1. L1 Regularization
+1. L1 Regularization  
+Used Regularization factor of 0.0001  
 
 ## Findings
 1. Model 1 - Batch Normalization + L1  
