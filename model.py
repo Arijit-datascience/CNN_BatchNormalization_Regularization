@@ -7,7 +7,6 @@
 
 # In[1]:
 
-
 from __future__ import print_function
 import torch
 import torch.nn as nn
@@ -23,13 +22,14 @@ import os
 
 # In[2]:
 
-
+# Set the dropout probability to be used in the network
 DROPOUT_VALUE = 0.04
 
 
 # In[3]:
 
-
+# In Batch Normalization, each channel in a layer is picked up across the batch on images and normalized.
+# Here, we use nn.BatchNorm2d(num_channels) after each Conv2d layer to implement Batch Normalization.
 class BatchNormalization(nn.Module):
     def __init__(self):
         super(BatchNormalization, self).__init__()
@@ -71,6 +71,7 @@ class BatchNormalization(nn.Module):
             nn.Dropout(DROPOUT_VALUE)
         )
 
+        # CONVOLUTION BLOCK 3
         self.conv4 = nn.Sequential(
             #input - RF:14x14, Channel Size: 8x8; Output RF: 18x18, Channel Size: 6x6
             nn.Conv2d(in_channels=16, out_channels=16, kernel_size=(3, 3), padding=0, bias=False),
@@ -79,6 +80,7 @@ class BatchNormalization(nn.Module):
             nn.Dropout(DROPOUT_VALUE)
         )
 
+        # CONVOLUTION BLOCK 4
         self.conv5 = nn.Sequential(
             #input - RF:18x18, Channel Size: 6x6; Output RF: 22x22, Channel Size: 6x6
             nn.Conv2d(in_channels=16, out_channels=16, kernel_size=(3, 3), padding=1, bias=False),
@@ -115,9 +117,8 @@ class BatchNormalization(nn.Module):
 
 # In[4]:
 
-# In Group Normalization, we forms groups of channels in each layer,
-# This will result in channels of each group to be normalized at once.
-# Here, we use nn.GroupNorm(num_groups,num_channels) after each Conv3d layer to implement Group Normalization.
+# In Group Normalization, we forms groups of channels within each layer and normalize the element values in these channel groups.
+# Here, we use nn.GroupNorm(num_groups,num_channels) after each Conv2d layer to implement Group Normalization.
 class GroupNormalization(nn.Module):
     def __init__(self):
         super(GroupNormalization, self).__init__()
@@ -159,6 +160,7 @@ class GroupNormalization(nn.Module):
             nn.Dropout(DROPOUT_VALUE)
         )
 
+        # CONVOLUTION BLOCK 3
         self.conv4 = nn.Sequential(
             #input - RF:14x14, Channel Size: 8x8; Output RF: 18x18, Channel Size: 6x6
             nn.Conv2d(in_channels=16, out_channels=16, kernel_size=(3, 3), padding=0, bias=False),
@@ -167,6 +169,7 @@ class GroupNormalization(nn.Module):
             nn.Dropout(DROPOUT_VALUE)
         )
 
+        # CONVOLUTION BLOCK 4
         self.conv5 = nn.Sequential(
             #input - RF:18x18, Channel Size: 6x6; Output RF: 22x22, Channel Size: 6x6
             nn.Conv2d(in_channels=16, out_channels=16, kernel_size=(3, 3), padding=1, bias=False),
@@ -203,9 +206,9 @@ class GroupNormalization(nn.Module):
 
 # In[5]:
 
-# Layer Normalization is a special case of Group Normalization wherein we selct the group count as 1
+# Layer Normalization is a special case of Group Normalization wherein we selct the group count as 1.
 # This will result in the entire channels in the layer to be normalized at once.
-# Here, we use nn.GroupNorm(1,num_channels) after each Conv3d layer to implement Layer Normalization.
+# Here, we use nn.GroupNorm(1,num_channels) after each Conv2d layer to implement Layer Normalization.
 class LayerNormalization(nn.Module):
     def __init__(self):
         super(LayerNormalization, self).__init__()
