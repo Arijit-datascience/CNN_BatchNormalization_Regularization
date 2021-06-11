@@ -53,29 +53,41 @@ Used Regularization factor of 0.0001
 Train Accuracy: 99.63  
 Test Accuracy: 99.52
 
+![image](https://user-images.githubusercontent.com/31658286/121716347-8a413d00-cafd-11eb-83a0-1c9eab99afe0.png)
+
+
 2. Model 2 - Layer Normalization  
 Train Accuracy: 99.58  
 Test Accuracy: 99.46  
+
+![image](https://user-images.githubusercontent.com/31658286/121716453-ac3abf80-cafd-11eb-82af-185bf432a52a.png)
+
 
 3. Model 3 - Batch Normalization + L1  
 Train Accuracy: 99.48  
 Test Accuracy: 99.48  
 
+![image](https://user-images.githubusercontent.com/31658286/121716192-5e25bc00-cafd-11eb-8d05-8b07026aceab.png)
+
 
 ## Training and Validation - Loss & Accuracy
-![train_test_loss_and_accuracy](https://user-images.githubusercontent.com/65554220/121549498-8b099e80-ca2b-11eb-9e13-9d4503b3cf94.png)
+
+![image](https://user-images.githubusercontent.com/31658286/121716789-181d2800-cafe-11eb-91db-be859e7908a4.png)
+
+![image](https://user-images.githubusercontent.com/31658286/121716847-29663480-cafe-11eb-96b6-9165e0013013.png)
+
 
 
 ## Misclassified Images
 1. Group Normalization  
 
-![GN_missclassified](https://user-images.githubusercontent.com/65554220/121549846-d6bc4800-ca2b-11eb-99d9-1657f1d7ed51.png)
+![image](https://user-images.githubusercontent.com/31658286/121717025-603c4a80-cafe-11eb-9255-97777601c826.png)
 
 
 2. Layer Normalization  
 
-![LN_missclassified](https://user-images.githubusercontent.com/65554220/121549886-df148300-ca2b-11eb-9fa8-afc3a7fd977a.png)
+![image](https://user-images.githubusercontent.com/31658286/121717096-71855700-cafe-11eb-9236-7ea3ccdf83c9.png)
 
 3. Batch Normalization + L1  
 
-![BN_missclassified](https://user-images.githubusercontent.com/65554220/121549777-c86e2c00-ca2b-11eb-88f6-18c5f125f3aa.png)
+![image](https://user-images.githubusercontent.com/31658286/121716952-4995f380-cafe-11eb-8c54-c22b35c047bc.png)
