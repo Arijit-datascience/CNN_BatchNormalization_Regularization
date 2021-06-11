@@ -20,15 +20,16 @@ Consider the following setup
 
 ![image](https://user-images.githubusercontent.com/31658286/121711963-cc1bb480-caf8-11eb-86c8-d4bd3649dcf0.png)
 
-We have two layers with batch size of 4, meaning 4 images in each batch.
+We have two layers with batch size of 4, meaning 4 images in each batch. Each of the 4 2x2 matrices under a layer represent a channel.
 
 ![image](https://user-images.githubusercontent.com/31658286/121712318-40eeee80-caf9-11eb-874c-0c57ced2a6e8.png)
+
 
 ![image](https://user-images.githubusercontent.com/31658286/121712389-5401be80-caf9-11eb-8296-03472365ba00.png)
 
 ![image](https://user-images.githubusercontent.com/31658286/121712469-654acb00-caf9-11eb-83ef-7f91bd3248ec.png)
 
-
+If you are interested, you can check out the complete implementation of whats explained above in an excel sheet [HERE](https://github.com/Arijit-datascience/EVA6-BatchNormalization-Regularization/blob/main/Normalizations.xlsx)
 
 ## MNIST Digit Recognition
 Number of training samples: 60000  
